@@ -14,7 +14,6 @@ function LandingPage() {
             <div className="flex space-x-4">
                 <button className="bg-blue-500 hover:bg-blue-600 py-2 px-4 rounded-lg shadow-lg transition-colors duration-300 ease-in-out" onClick={redirectToMonitoring}>Get Pulse Details</button>
                 
-                <button className="bg-green-500 hover:bg-green-600 py-2 px-4 rounded-lg shadow-lg transition-colors duration-300 ease-in-out" onClick={redirectToMonitoring}>View Logs</button>
             </div>
         </div>
     );
