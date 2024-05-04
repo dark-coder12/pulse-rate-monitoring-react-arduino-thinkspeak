@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import BuzzerControl from './BuzzerControl';
 
 function PulseRateMonitoring() {
     const [pulseData, setPulseData] = useState([]);
@@ -65,6 +66,7 @@ function PulseRateMonitoring() {
                         <div className="flex justify-center mt-8">
                             <button onClick={handleEmergencyCall} className="bg-red-500 text-white py-2 px-4 rounded-lg shadow hover:bg-red-600 transition-colors duration-300 ease-in-out">Emergency Call</button>
                         </div>
+                        <BuzzerControl/>
                     </div>
                 )}
             </div>
