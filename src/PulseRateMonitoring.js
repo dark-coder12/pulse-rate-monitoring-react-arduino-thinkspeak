@@ -25,7 +25,7 @@ function PulseRateMonitoring() {
       }
     }
 
-    const interval = setInterval(fetchData, 5000) // Refresh every 5 seconds
+    const interval = setInterval(fetchData, 2000) // Refresh every 2 seconds
 
     // Cleanup function
     return () => clearInterval(interval)
@@ -117,7 +117,7 @@ function PulseCard({ reading, sendCommand }) {
         ) : (
           <p className="text-lg">Pulse Rate: {pulseValue}</p>
         )}
-         <p className="text-lg">Created At: {new Date(reading.created_at).toLocaleString()}</p>
+        <p className="text-lg">Created At: {new Date(reading.created_at).toLocaleString()}</p>
       </div>
     </div>
   )
