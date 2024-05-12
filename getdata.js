@@ -11,7 +11,7 @@ app.get('/', async (req, res) => {
   try {
     const fetch = await import('node-fetch')
     const apiURL =
-      'https://api.thingspeak.com/channels/2525383/feeds.json?api_key=BONUVFUO0N1P9XX0&results=10'
+      'https://api.thingspeak.com/channels/2525383/feeds.json?api_key=BONUVFUO0N1P9XX0&results=15'
     const response = await fetch.default(apiURL)
 
     const data = await response.json()

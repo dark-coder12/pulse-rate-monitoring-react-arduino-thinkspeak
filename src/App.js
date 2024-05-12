@@ -6,7 +6,7 @@ import LandingPage from './LandingPage';
 import './App.css';
 
 const App = () => {
-    const [isUserLoggedIn, setIsUserLoggedIn] = useState(false);
+    const [isUserLoggedIn, setIsUserLoggedIn] = useState(true);
 
     const handleLogin = () => {
         setIsUserLoggedIn(true);

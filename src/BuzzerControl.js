@@ -1,23 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 
 const BuzzerControl = () => {
   const [buzzerState, setBuzzerState] = useState('');
-
-  /*useEffect(() => {
-    fetchBuzzerState();
-  }, []);
-
-  const fetchBuzzerState = () => {
-    axios
-      .get('http://localhost:5000/buzzer/state') // Change to match your Express server URL
-      .then((response) => {
-        setBuzzerState(response.data.state);
-      })
-      .catch((error) => {
-        console.error('Error fetching buzzer state:', error);
-      });
-  };*/
 
   const sendCommand = (command) => {
     axios
@@ -30,18 +15,6 @@ const BuzzerControl = () => {
         console.error('Error sending command:', error);
       });
   };
-
-  /*const sendCommand = () => {
-    const data = { command: 'on' } // Your data to be sent in the request body
-    axios
-      .post('http://192.168.100.97/buzzer', data)
-      .then((response) => {
-        console.log('Response:', response.data)
-      })
-      .catch((error) => {
-        console.error('Error:', error)
-      })
-    }*/
 
   return (
     <div className="text-center">

@@ -25,7 +25,7 @@ function PulseRateMonitoring() {
       }
     }
 
-    const interval = setInterval(fetchData, 5000) // Refresh every 5 seconds
+    const interval = setInterval(fetchData, 2000) // Refresh every 5 seconds
 
     // Cleanup function
     return () => clearInterval(interval)
@@ -94,7 +94,7 @@ function PulseRateMonitoring() {
 
 function PulseCard({ reading, sendCommand }) {
   const pulseValue = reading.field1
-  const isHighPulse = pulseValue > 85
+  const isHighPulse = pulseValue < 60
 
   useEffect(() => {
     if (isHighPulse) {
@@ -111,7 +111,7 @@ function PulseCard({ reading, sendCommand }) {
       <div className="px-6 py-8">
         {isHighPulse ? (
           <>
-            <p className="text-xl font-semibold text-red-500 mb-4">High Pulse Rate Alert!</p>
+            <p className="text-xl font-semibold text-red-500 mb-4">Low Pulse Rate Alert!</p>
             <p className="text-lg">Pulse Rate: {pulseValue}</p>
           </>
         ) : (
